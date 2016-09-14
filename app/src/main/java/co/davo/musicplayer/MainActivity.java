@@ -9,13 +9,14 @@ import android.widget.Button;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.sappho);
+        mediaPlayer = MediaPlayer.create(this, R.raw.sappho);
 
 
         final Button playButton = (Button) findViewById(R.id.play_button);
